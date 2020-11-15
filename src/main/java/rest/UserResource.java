@@ -126,6 +126,7 @@ public class UserResource {
         long startTime = System.nanoTime();
         List<TagDTO> fetched = ScraperFacade.runParrallel();
         long endTime = System.nanoTime()-startTime;
+        System.out.println("Last test");
         return TagDTO.getTagDTOList("Parallel fetching", fetched, endTime);
         
     }
